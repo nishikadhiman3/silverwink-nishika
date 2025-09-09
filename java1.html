@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            width: 50%;
+            height: 50px;
+            /* background-color: yellowgreen; */
+            list-style: none;
+        }
+        ul li{
+            width: 20%;
+            height: 50px;
+            background-color: rgb(238, 129, 129);
+            float: left;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        ul li a{
+            text-decoration: none;
+            display: block;
+            line-height: 50px;
+            color: #fff;
+        }
+        ul li:hover{
+            background-color: rgb(189, 65, 65);
+        }
+        ul li ul{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            
+        }
+        ul li ul li{
+            width: 100%;
+        }
+        #drop{
+            display: none;
+        }
+        #drag{
+            display: none;
+            /* align-items: left; */
+            position: absolute;
+            /* left: 100px; */
+            width: 130px;
+            height: 50px;
+            /* right: 10px; */
+            margin-left: 124px;
+            display: block; 
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+    <li><a href="">HOME</a></li>
+    <li><a href="">ABOUT</a></li>
+    <li><a href="">CONTACT</a></li>
+    <li onmousemove="showMenu()" onmouseout="hideMenu()"><a href="">SERVICES</a>
+        <ul id="drop">
+            <li><a href="">Hosting</a></li>
+            <li onmousemove="showMenuTwo()" onmouseout="hideMenuTwo()"><a href=""> movies</a>
+                <ul id="drag">
+                     <li><a href="">kesari</a></li>
+                     <li><a href="">omg</a></li>
+                     <li><a href="">maa</a></li>
+                     <li><a href="">raid</a></li>
+                </ul>
+            </li>
+            <li><a href="">train ticket</a></li>
+            <li><a href="">movies</a></li>
+        </ul>
+    </li>
+    <li><a href="">PROJECTS</a></li>
+    </ul>
+    <script>
+        function showMenu(){ document.getElementById("drop").style.display="block"; }
+        function hideMenu(){ document.getElementById("drop").style.display="none";}
+        function showMenuTwo(){ document.getElementById("drag").style.display="block"; }
+        function hideMenuTwo(){ document.getElementById("drag").style.display="none";}   
+    </script>
+</body>
+</html>
